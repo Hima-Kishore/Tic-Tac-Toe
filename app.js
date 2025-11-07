@@ -69,6 +69,7 @@ const checkWinner = () => {
     for(let pattern of winPatterns) {
         if(boxes[pattern[0]].innerText === boxes[pattern[1]].innerText && boxes[pattern[1]].innerText === boxes[pattern[2]].innerText && boxes[pattern[0]].innerText != "") {
             showWinner(boxes[pattern[0]].innerText);
+            clicks--;
         }
         else if(clicks === 9) {
             msg.innerText = `It's a draw!`;

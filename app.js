@@ -43,6 +43,7 @@ boxes.forEach((box) => {
             turnO = false;
         } else {
             box.innerText = "O";
+            box.style.color = "#b0413e";
             turnO = true;
         }
         clicks++;

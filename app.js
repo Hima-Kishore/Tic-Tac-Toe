@@ -39,11 +39,11 @@ boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if(turnO) {
             box.innerText = "X";
-            box.style.color = "lightblue";
+            box.style.color = "#b0413e";
             turnO = false;
         } else {
             box.innerText = "O";
-            box.style.color = "#b0413e";
+            box.style.color = "lightblue";
             turnO = true;
         }
         clicks++;
@@ -69,8 +69,8 @@ const checkWinner = () => {
     for(let pattern of winPatterns) {
         if(boxes[pattern[0]].innerText === boxes[pattern[1]].innerText && boxes[pattern[1]].innerText === boxes[pattern[2]].innerText && boxes[pattern[0]].innerText != "") {
             showWinner(boxes[pattern[0]].innerText);
-        };
-        if(clicks === 9) {
+        }
+        else if(clicks === 9) {
             msg.innerText = `It's a draw!`;
             msgContainer.classList.remove("hide");
         }

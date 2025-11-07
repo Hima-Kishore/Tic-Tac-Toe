@@ -71,11 +71,11 @@ const checkWinner = () => {
             showWinner(boxes[pattern[0]].innerText);
             clicks--;
         }
-        else if(clicks === 9) {
-            msg.innerText = `It's a draw!`;
-            msgContainer.classList.remove("hide");
-        }
     };
+    if(clicks === 9) {
+        msg.innerText = `It's a draw!`;
+        msgContainer.classList.remove("hide");
+    }
 };
 
 newGameBtn.addEventListener("click", resetGame);
